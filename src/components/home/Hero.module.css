@@ -215,24 +215,24 @@
     display: none;
   }
 
-  /* Nav arrows inside photo stage on mobile - positioned lower down away from faces */
+  /* Nav arrows on mobile - pinned to bottom corners, away from faces */
   .navBtn {
     top: auto;
-    bottom: 14px;
+    bottom: 8px;
     transform: none;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    background: rgba(0, 0, 0, 0.55);
-    border-color: rgba(255, 255, 255, 0.45);
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .prevBtn {
-    left: 12px;
+    left: 8px;
   }
 
   .nextBtn {
-    right: 12px;
+    right: 8px;
   }
 
   /* Separate black content panel below photograph on mobile */
