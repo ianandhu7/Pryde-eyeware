@@ -1,0 +1,12 @@
+import sharp from "sharp";
+import {readFileSync,writeFileSync,copyFileSync} from "node:fs";
+const root="C:/Users/anand/.codex/generated_images/01a0d741-6aba-7521-a241-85e4d833e2ec/";
+await sharp(root+"exec-ca05065a-73bb-4dd7-b277-d16203731660.png").resize({width:2172,withoutEnlargement:true}).webp({quality:88}).toFile("public/images/hero/editorial-reference-placeholder.webp");
+await sharp(root+"exec-a245ddc9-02a7-4ada-b136-239a1f73ca93.png").resize({width:1600,withoutEnlargement:true}).webp({quality:85}).toFile("public/images/collections/optical-portrait-placeholder.webp");
+copyFileSync("C:/Users/anand/Downloads/design 2.png","references/desktop-monochrome-reference.png");
+let content=readFileSync("src/content/home.ts","utf8").replace("/images/hero/editorial-placeholder.webp","/images/hero/editorial-reference-placeholder.webp").replace("portrait of a woman in sunglasses beside a sunlit stone wall.","portrait of a man in black sunglasses beside sunlit stone columns.");
+content=content.replace('title:"Made to be seen."','title:"Made to\\nbe seen."');
+content=content.replace('categories:{','categories:{items:[{href:"/collections/optical",label:"Optical / 01",image:"/images/collections/optical-portrait-placeholder.webp",alt:"AI-generated portrait of a woman wearing optical glasses; not an actual PRYDE product."},{href:"/collections/sunglasses",label:"Sun / 02",image:"/images/collections/sunglasses-placeholder.webp",alt:"AI-generated illustrative black sunglasses on stone; not an actual PRYDE product."}],');
+writeFileSync("src/content/home.ts",content);
+let hero=readFileSync("src/components/home/Hero.tsx","utf8").replace('<p className="eyebrow">{home.hero.eyebrow}</p>',"");
+writeFileSync("src/components/home/Hero.tsx",hero);

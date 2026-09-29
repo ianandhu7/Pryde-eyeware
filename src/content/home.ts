@@ -1,0 +1,7 @@
+export const home = {
+ hero: { eyebrow:"A POINT OF VIEW. ENTIRELY YOURS.", title:"Own your\nperspective.", cta:"Explore Sunglasses", image:"/images/hero/editorial-reference-placeholder.webp", alt:"Illustrative AI-generated portrait of a man in black sunglasses beside sunlit stone columns." },
+ categories:{items:[{href:"/collections/optical",label:"Optical / 01",image:"/images/collections/optical-portrait-placeholder.webp",alt:"AI-generated portrait of a woman wearing optical glasses; not an actual PRYDE product."},{href:"/collections/sunglasses",label:"Sun / 02",image:"/images/collections/sunglasses-placeholder.webp",alt:"AI-generated illustrative black sunglasses on stone; not an actual PRYDE product."}],eyebrow:"THE COLLECTIONS",title:"Made to\nbe seen.",description:"Two ways to see the world. One unmistakably individual point of view."},
+ introduction:{eyebrow:"THE PRYDE PERSPECTIVE",title:"Your frames.\nYour point of view.",text:"Eyewear is personal. It’s part of how you see the world, and how you choose to be seen. Explore a new expression of your everyday style with PRYDE.",cta:"Get to know PRYDE"},
+ highlights:{eyebrow:"IN FOCUS",title:"A closer look.",text:"Explore the mood of each collection. Approved frame details and photography are coming soon."},
+ stockists:{eyebrow:"EXPERIENCE PRYDE",title:"See it for yourself.",text:"Find out where to discover PRYDE eyewear.",cta:"Where to Buy"},
+};

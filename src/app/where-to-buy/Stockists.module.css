@@ -1,0 +1,1 @@
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-bottom:80px}.grid article{border-top:1px solid var(--line);padding-top:28px}.grid h2{font-size:32px}.grid address{font-style:normal;white-space:pre-line;line-height:1.8;margin-top:20px}.note{font-size:10px}@media(max-width:600px){.grid{grid-template-columns:1fr}}

@@ -1,0 +1,71 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  user-select: none;
+}
+
+/* ── Image Container ── */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.15 / 1;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.img {
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: 8% !important;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  padding: 3px 8px;
+  font-family: var(--sans);
+  text-transform: uppercase;
+}
+
+/* ── Details Below Image ── */
+.details {
+  padding: 14px 4px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.title {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: #0a0a0a;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.price {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  color: #333333;
+  letter-spacing: 0.08em;
+  margin: 0;
+}

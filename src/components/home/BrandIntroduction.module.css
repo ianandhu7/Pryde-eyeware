@@ -1,0 +1,109 @@
+/* ─── BrandIntroduction ───────────────────────────── */
+.section {
+  padding: clamp(80px, 10vw, 160px) 4%;
+  background-color: var(--ink);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(245, 243, 239, 0.15);
+  padding-bottom: 20px;
+}
+
+.eyebrow,
+.chapter {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--stone);
+  font-weight: 500;
+}
+
+.quote {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4.8vw, 72px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  max-width: 1050px;
+}
+
+.bottomRow {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  border-top: 1px solid rgba(245, 243, 239, 0.15);
+  padding-top: 40px;
+}
+
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metaLabel {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--stone-dark);
+  font-weight: 600;
+}
+
+.metaVal {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--paper);
+  font-weight: 400;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
+
+.desc {
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.7;
+  color: rgba(245, 243, 239, 0.8);
+  font-weight: 300;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--stone);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.link:hover {
+  color: var(--paper);
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .bottomRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

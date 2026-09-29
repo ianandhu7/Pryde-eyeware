@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ─── Design Tokens ──────────────────────────────────── */
+:root {
+  --ink:        #0A0A0A;
+  --paper:      #F7F7F5;
+  --stone:      #D7C3A5;
+  --charcoal:   #242424;
+  --olive:      #5B644A;
+  --muted:      #888;
+  --line:       rgba(255,255,255,.12);
+  --line-dark:  rgba(0,0,0,.12);
+  --serif:      'Cormorant Garamond', Georgia, serif;
+  --sans:       'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --nav-h:      72px;
+  --ease-out:   cubic-bezier(.16,1,.3,1);
+  --ease-inout: cubic-bezier(.76,0,.24,1);
+}
+
+/* ─── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+main#main-content { padding-top: var(--nav-h); }
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
+
+/* ─── Typography ─────────────────────────────────────── */
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1; }
+h1 { font-size: clamp(52px, 7vw, 120px); letter-spacing: -.02em; }
+h2 { font-size: clamp(42px, 5.5vw, 88px); letter-spacing: -.02em; line-height: 1.02; }
+h3 { font-size: clamp(28px, 3vw, 48px); }
+p  { line-height: 1.7; }
+.eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+
+/* ─── Accessibility ──────────────────────────────────── */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.skip-link { position: fixed; top: 12px; left: 12px; padding: 14px 20px; background: var(--ink); color: var(--paper); z-index: 9999; transform: translateY(-160%); transition: transform .3s; font-size: 12px; letter-spacing: .1em; }
+.skip-link:focus { transform: translateY(0); }
+a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+
+/* ─── Animations ─────────────────────────────────────── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+@keyframes progressBar { from { width: 0; } to { width: 100%; } }
+
+/* ─── Scroll Reveal ──────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .22s; }
+.reveal-delay-3 { transition-delay: .34s; }
+.reveal-delay-4 { transition-delay: .46s; }
+
+/* ─── Utilities ──────────────────────────────────────── */
+.container { max-width: 1480px; margin: 0 auto; padding: 0 48px; }
+.section { padding: 100px 0; }
+.thin-rule { width: 100%; height: 1px; background: var(--line-dark); }
+.thin-rule-light { width: 100%; height: 1px; background: var(--line); }
+
+/* ─── Buttons ────────────────────────────────────────── */
+.btn { display: inline-flex; align-items: center; gap: 16px; padding: 15px 32px; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); transition: background .25s, color .25s; }
+.btn:hover { background: transparent; color: var(--ink); }
+.btn-outline { background: transparent; color: var(--paper); border-color: rgba(255,255,255,.45); }
+.btn-outline:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.btn-outline-dark { background: transparent; color: var(--ink); border-color: rgba(0,0,0,.4); }
+.btn-outline-dark:hover { background: var(--ink); color: var(--paper); }
+.text-link { display: inline-flex; gap: 20px; align-items: center; font-family: var(--sans); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; border-bottom: 1px solid; padding: 6px 0; min-height: 44px; }
+.text-link:hover { opacity: .6; }
+
+/* ─── Legacy compat ──────────────────────────────────── */
+.cta-row { padding: 65px 0; border-top: 1px solid var(--line-dark); display: flex; gap: 40px; align-items: center; justify-content: space-between; }
+.cta-row>a { flex-shrink: 0; }
+.back-link { display: inline-block; padding: 10px 0; margin-bottom: 36px; font-size: 12px; min-height: 44px; }
+.empty-state { padding: 45px 0 90px; border-top: 1px solid var(--line-dark); }
+.prose { max-width: 650px; padding-bottom: 70px; }
+.prose h2 { font-size: 40px; margin: 0 0 25px; }
+.prose p  { line-height: 1.9; color: var(--muted); font-size: 17px; margin-bottom: 28px; }
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) { .container { padding: 0 24px; } .section { padding: 64px 0; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }

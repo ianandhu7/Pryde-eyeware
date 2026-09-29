@@ -1,0 +1,131 @@
+/* ─── Section ─────────────────────────────────────────── */
+.section {
+  padding: clamp(48px, 7vw, 96px) clamp(20px, 4%, 80px);
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* ─── Header Row ─────────────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 300;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.filterBar {
+  display: flex;
+  gap: 6px;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  color: #0a0a0a;
+  padding: 6px 16px;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  font-family: var(--sans);
+}
+
+.filterBtn:hover {
+  border-color: #0a0a0a;
+}
+
+.activeFilter {
+  background: #0a0a0a;
+  color: #ffffff;
+  border-color: #0a0a0a;
+}
+
+.viewAll {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: #0a0a0a;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.viewAll:hover {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* ─── Grid (Elegantly spaced matching eyewear showcase) ─ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.5vw, 28px);
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
