@@ -46,12 +46,10 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top right,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.35) 45%,
-    transparent 80%
-  );
+  background: linear-gradient(to top right,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      transparent 80%);
 }
 
 /* ─── Desktop Content (≥ 768px) ────────────────────────── */
@@ -191,7 +189,8 @@
     height: auto;
     min-height: 0;
     max-height: none;
-    aspect-ratio: 1.5 / 1; /* Match campaign photo 3:2 landscape aspect ratio */
+    aspect-ratio: 1.5 / 1;
+    /* Match campaign photo 3:2 landscape aspect ratio */
   }
 
   .photoWrap {
@@ -216,21 +215,24 @@
     display: none;
   }
 
-  /* Nav arrows inside photo stage on mobile */
+  /* Nav arrows inside photo stage on mobile - positioned lower down away from faces */
   .navBtn {
-    width: 44px;
-    height: 44px;
-    font-size: 24px;
-    background: rgba(0, 0, 0, 0.45);
-    border-color: rgba(255, 255, 255, 0.4);
+    top: auto;
+    bottom: 14px;
+    transform: none;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.55);
+    border-color: rgba(255, 255, 255, 0.45);
   }
 
   .prevBtn {
-    left: 10px;
+    left: 12px;
   }
 
   .nextBtn {
-    right: 10px;
+    right: 12px;
   }
 
   /* Separate black content panel below photograph on mobile */

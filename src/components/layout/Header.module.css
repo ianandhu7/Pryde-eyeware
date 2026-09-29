@@ -95,6 +95,7 @@
   .leftNav .navLink:not(:first-child) {
     display: none;
   }
+
   .rightNav .navLink:not(:last-child) {
     display: none;
   }

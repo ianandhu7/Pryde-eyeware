@@ -4,5 +4,4 @@ node_modules/
 !.env.example
 *.tsbuildinfo
 artifacts/
-scratch/
 *.log
