@@ -217,9 +217,9 @@
 
   /* Nav arrows on mobile - pinned to bottom corners, away from faces */
   .navBtn {
-    top: auto;
-    bottom: 8px;
-    transform: none;
+    top: unset !important;
+    bottom: 10px !important;
+    transform: none !important;
     width: 34px;
     height: 34px;
     font-size: 18px;
@@ -228,11 +228,11 @@
   }
 
   .prevBtn {
-    left: 8px;
+    left: 10px;
   }
 
   .nextBtn {
-    right: 8px;
+    right: 10px;
   }
 
   /* Separate black content panel below photograph on mobile */
